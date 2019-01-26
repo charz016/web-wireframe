@@ -19,9 +19,8 @@
 
 .section-1 {
   background: #515A79;
-  min-height: 80vh;
-  overflow-x: hidden;
-  margin-top: 102px; }
+  min-height: 100vh;
+  overflow-x: hidden; }
   .section-1__info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -38,10 +37,16 @@
     justify-content: center; }
     .section-1__info-container {
       margin: 0 auto;
-      width: 80%; }
+      max-width: 450px; }
       .section-1__info-container-title, .section-1__info-container-text {
         color: white;
-        margin-bottom: 30px; }
+        margin-bottom: 10px; }
+      .section-1__info-container-title {
+        font-weight: 800;
+        font-size: 2rem; }
+      .section-1__info-container-text {
+        color: #8086A4;
+        font-size: .9rem; }
       .section-1__info-container-button {
         color: #ffffff;
         background-color: #7DDF96;
@@ -70,7 +75,8 @@
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 20px; }
   .section-2__content {
     text-align: center; }
     .section-2__content-title {
@@ -275,7 +281,7 @@
       padding: 8px 35px;
       cursor: pointer;
       margin: 10px;
-      border-color: #3d435a; }
+      border-color: #717899; }
       .section-5__container-button:nth-child(even) {
         background: #7DDF96; }
 
@@ -293,7 +299,8 @@
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 20px; }
   .section-6__content {
     text-align: center; }
     .section-6__content-title {
@@ -448,7 +455,7 @@
       .footer__card-container-button-1 {
         background: none;
         color: white;
-        border-color: #3d435a;
+        border-color: #717899;
         font-weight: bold;
         cursor: pointer;
         padding: 10px 32px;
@@ -507,22 +514,33 @@
       cursor: pointer;
       margin-left: 20px; }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 767px) {
   .section-1__img {
     display: none; }
-  .section-1__info {
-    height: 90vh;
-    background-image: url("/img/iphone.png");
-    background-repeat: no-repeat;
-    background-position: center; }
   .section-1__info-container {
-    width: 80%; } }
-
-@media only screen and (max-width: 600px) {
+    margin-top: 300px;
+    width: 260px; }
+    .section-1__info-container-title {
+      font-size: 1.5rem; }
+  .section-1__info {
+    height: 100vh;
+    background-image: url("../img/iphone.png");
+    background-repeat: no-repeat;
+    background-position: center 80px;
+    background-size: 420px; }
+  .section-1__info-container {
+    max-width: 300px; }
   .footer__section-2__container {
     display: none; }
   .section-4__content-button {
-    font-size: .8rem; } }
+    font-size: .8rem; }
+  .section-6__wrap-container-img {
+    width: 300px;
+    height: 200px; }
+  .section-7__container-input {
+    width: 190px; }
+  .section-7__container-button {
+    padding: 10px 20px; } }
 
 .container {
   padding: 50px 0;
@@ -535,6 +553,8 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .container__circle {
+    margin: 30px; }
 
 .chart {
   position: relative;
@@ -544,11 +564,11 @@
   text-align: center; }
 
 .chart figcaption {
-  padding: 50px 25px;
+  padding: 50px 35px;
   width: 100px;
   height: 40px;
   border-radius: 100px;
-  line-height: 50px; }
+  line-height: 80px; }
 
 .chart svg {
   position: absolute;
@@ -615,7 +635,7 @@
 .navbar-toggle {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 80px;
   cursor: pointer;
   font-size: 24px; }
 
@@ -630,9 +650,8 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     min-height: 70px; }
   .main-nav {
     display: -webkit-box;
@@ -647,6 +666,6 @@
     -ms-flex-pack: end;
     justify-content: flex-end; }
   .nav-links {
-    margin-left: 40px; }
+    margin: 0 10px; }
   .navbar-toggle {
     display: none; } }

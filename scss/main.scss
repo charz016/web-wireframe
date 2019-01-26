@@ -25,9 +25,9 @@
 
 .section-1{
 background: $primary;
-min-height: 80vh;
+min-height: 100vh;
 overflow-x: hidden;
-margin-top: 102px;
+
 &__info{
 display: flex;
 flex-direction: column;
@@ -35,11 +35,22 @@ align-items: center;
 justify-content: center;
     &-container{
         margin: 0 auto;
-        width: 80%;
+        max-width: 450px;
         &-title,&-text{
             color: white;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
+
+        &-title{
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        &-text{
+            color: $text;
+            font-size: .9rem;
+        }
+
         &-button{
             color: #ffffff;
             background-color: $green;
@@ -69,10 +80,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
+padding: 20px;
 &__content{
     text-align: center;
-
     &-title{
         color: $primary;
         font-weight: 800;
@@ -266,7 +276,7 @@ overflow-x: hidden;
         padding: 8px 35px;
         cursor: pointer;
         margin: 10px;
-        border-color:darken($primary, 10%) ;
+        border-color:darken($text, 5%) ;
         &:nth-child(even) {
             background:$green;
         }
@@ -282,7 +292,7 @@ overflow-x: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+padding: 20px;
     &__content{
         text-align: center;
 
@@ -432,7 +442,7 @@ overflow-x: hidden;
         &-button-1{
             background: none;
             color: white;
-            border-color:darken($primary, 10%) ;
+            border-color:darken($text, 5%) ;
             font-weight: bold;
             cursor: pointer;
             padding: 10px 32px;
@@ -496,22 +506,30 @@ overflow-x: hidden;
     }
 }
 
-@media only screen and (max-width: 430px) {
-  .section-1__img{
-      display: none;
-  }
-  .section-1__info{
-    height: 90vh;
-    background-image: url('/img/iphone.png');
-    background-repeat: no-repeat;
-    background-position: center; 
-}
-.section-1__info-container{
-    width: 80%;
-}
-}
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 767px){
+    .section-1__img{
+        display: none;
+    }
+    .section-1__info-container{
+        margin-top: 300px;
+        width: 260px;
+
+        &-title{
+            font-size: 1.5rem;
+        }
+    }
+    .section-1__info{
+      height: 100vh;
+      background-image: url('../img/iphone.png');
+      background-repeat: no-repeat;
+      background-position: center 80px; 
+      background-size: 420px;
+  }
+
+  .section-1__info-container{
+    max-width:300px;
+  }
 
     .footer__section-2__container{
         display: none;
@@ -520,14 +538,30 @@ overflow-x: hidden;
         font-size: .8rem;
     }
 
+    .section-6__wrap-container-img{
+        width: 300px;
+        height: 200px;
+    }
+    .section-7__container-input{
+        width: 190px;
+    }
+    .section-7__container-button{
+        padding: 10px 20px;
+    }
+
+    
 }
 
   .container {
     padding: 50px 0;
     text-align: center;
     display: flex;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
+
+    &__circle{
+        margin: 30px;
+    }
   }
 
   
@@ -540,11 +574,11 @@ overflow-x: hidden;
   }
   
   .chart figcaption {
-    padding: 50px 25px;
+    padding: 50px 35px;
     width: 100px;
     height: 40px;
     border-radius: 100px;
-    line-height: 50px;
+    line-height: 80px;
   }
   
   .chart svg {
@@ -617,7 +651,7 @@ overflow-x: hidden;
 .navbar-toggle {
     position: absolute;
     top: 30px;
-    right: 40px;
+    right: 80px;
     cursor: pointer;
     font-size: 24px;
 }
@@ -630,7 +664,7 @@ overflow-x: hidden;
     .navbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         min-height: 70px;
     }
 
@@ -642,7 +676,7 @@ overflow-x: hidden;
     }
 
     .nav-links {
-        margin-left: 40px;
+        margin: 0 10px;
     }
 
     .navbar-toggle {
